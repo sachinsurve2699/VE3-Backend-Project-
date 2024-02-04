@@ -5,6 +5,7 @@ const router = express.Router()
 // Fetch all tasks
 
 router.get('/tasks', (req, res) => {
+    // console.log("req")
     db.query('SELECT * FROM tasks', (error, results) => {
     if (error) throw error;
     res.json(results);
